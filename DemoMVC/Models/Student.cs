@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace DemoMVC.Models
 {
@@ -6,6 +7,7 @@ namespace DemoMVC.Models
     {
         public string FirstName { get; set; }
 
+        [Required]
         public string LastName { get; set; }
 
         public int Number { get; set; }

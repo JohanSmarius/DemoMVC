@@ -10,20 +10,48 @@ namespace DemoMVC.Controllers
 {
     public class HomeController : Controller
     {
+        //public string Index()
+        //{
+        //    return "Hello World";
+        //}
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+
+        public IActionResult TimeView()
         {
+            ViewBag.CurrentTime = DateTime.Now.ToLongTimeString();
+            return View("DemoView");
+        }
+
+        [HttpGet]
+        public IActionResult StudentEdit()
+        {
+            var model = new Student
+            {
+                FirstName = "Johan",
+                LastName = "Smarius",
+                Number = 12345,
+                StartYear = 2018
+            };
+
+            return View("StudentEdit", model);
+        }
+
+        [HttpPost]
+        public IActionResult StudentEdit(Student newStudent)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+
+
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }
