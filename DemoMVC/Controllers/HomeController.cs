@@ -16,6 +16,7 @@ namespace DemoMVC.Controllers
         }
         public IActionResult Time()
         {
+            ViewBag.CurrentTime = DateTime.Now.ToLongTimeString();
             return View("DemoView");
         }
 
