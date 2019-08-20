@@ -1,4 +1,5 @@
 # Demo structure
+For each step there is a seperate branch.
 
 ## Demo 1
 The initial code after generation
