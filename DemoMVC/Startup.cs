@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DemoMVC.Controllers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -56,8 +57,19 @@ namespace DemoMVC
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                    name: "students",
+                    defaults: new { controller = "Home", action = "StudentEdit" },
+                    template: "students");
+
+                routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+
+
+                routes.MapRoute(
+                    name: "non-default",
+                    template: "/Pages/{controller=Home}/{action=Index}/{id?}");
+
             });
         }
     }
