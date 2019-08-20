@@ -14,10 +14,25 @@ namespace DemoMVC.Controllers
         {
             return View();
         }
+
         public IActionResult Time()
         {
             ViewBag.CurrentTime = DateTime.Now.ToLongTimeString();
             return View("DemoView");
+        }
+
+        [HttpGet]
+        public IActionResult Student()
+        {
+            var model = new Student
+            {
+                FirstName = "Johan",
+                LastName = "Smarius",
+                Number = 12345,
+                StartYear = 2018
+            };
+
+            return View("EditStudent", model);
         }
 
 
