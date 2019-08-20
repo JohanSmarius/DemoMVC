@@ -32,7 +32,7 @@ namespace DemoMVC.Controllers
                 StartYear = 2018
             };
 
-            return View("EditStudent", model);
+            return View("Student", model);
         }
 
         [HttpPost]
