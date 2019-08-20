@@ -5,32 +5,32 @@ For each step there is a seperate branch.
 The initial code after generation
 
 ## Demo 2
-Index action method just returns string. Responsibility controller.
+The controller has just one action methode. The Index action method just returns a string. This step shows the responsibility for the controller.
 
 ## Demo 3
-Controller and default view for showing the relationship
+The controller and default view are now restored. This step shows the relationship between the controller and the view.
 
 ## Demo 4
-Controller with non default view
+The controller can now use a non default view.
 
 ## Demo 5
-Binding with Viewbag
+The view now uses binding using a Viewbag.
 
 ## Demo 6
-Modelbinding 
+This step shows the modelbinding in MVC for a get action method.
 *The EditStudent has been named incorrectly on purpose*
 
 ## Demo 7
-Modelbinding with post
+The modelbinding now works the post action method as well. There is no validation yet.
 
 ## Demo 8 
-Add validation for post.
+The validation has been added. A correct post works. An incorrect post shows an error.
 
 ## Demo 9
-Fix for wrong view name.
+The error for the view name is fixed.
 
 ## Demo 10 
-Show error message and layout message.
+The validation now show an error message. The message has an overriden css class.
 
 ## Demo 11
-Redirect from Index to Student.
+The index action method shows an reference to Student.
