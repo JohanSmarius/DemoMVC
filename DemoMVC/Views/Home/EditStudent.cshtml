@@ -5,17 +5,21 @@
 
 <h1>EditStudent</h1>
 
-<div class="form-group">
-    <label>FirstName</label>
-    <span>@Model.FirstName</span>
-</div>
+<form method="post" asp-action="Student">
+    <div class="form-group">
+        <label for="firstName">FirstName</label>
+        <input asp-for="@Model.FirstName" />
+    </div>
 
-<div class="form-group">
-    <label>LastName</label>
-    <span>@Model.LastName</span>
-</div>
+    <div class="form-group">
+        <label for="lastName">LastName</label>
+        <input asp-for="@Model.LastName">
+    </div>
 
-<div class="form-group">
-    <label>First year</label>
-    <span>@Model.StartYear</span>
-</div>
+    <div class="form-group">
+        <label for="lastName">First year</label>
+        <input asp-for="@Model.StartYear" />
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
