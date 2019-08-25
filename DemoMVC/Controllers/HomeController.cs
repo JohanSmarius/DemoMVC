@@ -35,6 +35,11 @@ namespace DemoMVC.Controllers
             return View("EditStudent", model);
         }
 
+        [HttpPost]
+        public IActionResult Student(Student newStudent)
+        {
+            return RedirectToAction("Index");
+        }
 
     }
 }
