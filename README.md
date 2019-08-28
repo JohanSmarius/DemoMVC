@@ -60,7 +60,7 @@ Demo:
 3. Add @layout to the new empty layout just for the new page (seperate branch)
 
 Final
----
+
 
 @{
     Layout = "_BasicLayout";
@@ -79,7 +79,6 @@ Final
 
 </body>
 </html>
----
 
 # ViewImports
 
@@ -88,11 +87,10 @@ Demo:
 1. Add page Teacher.cshtml
 2. Try to add the model. 
 3. Add the code
----
 @using DemoMVC.Models.ViewModels
----
 4. The ViewModels folder will contain a lot of viewmodels for our application. Add the using to the _ViewImports.cshtml and remove the using from the page.
-5. Explain the use of the --- addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers ---
+5. Explain the use of the addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers 
 
-
+# Razor (RazorInView)
+This demo shows how you can use some razor syntax in the view
 
