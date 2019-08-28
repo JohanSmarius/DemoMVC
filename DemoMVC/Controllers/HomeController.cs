@@ -75,6 +75,22 @@ namespace DemoMVC.Controllers
             return View("Teacher", teacher);
         }
 
+        [HttpGet]
+        public IActionResult Course()
+        {
+            var repository = new StudentRepository();
+
+            var course = new Course
+            {
+                Name = "Pro ASP.NET Core MVC 2",
+                Students = repository.GetStudents(),
+                Teacher = new Teacher { Code = "jawsmari", Name = "Johan Smarius"}
+            };
+
+            return View("Course", course);
+
+        }
+
 
 
     }

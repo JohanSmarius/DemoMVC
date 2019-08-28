@@ -1,0 +1,33 @@
+﻿@model  Course
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Course</title>
+</head>
+<body>
+
+<div>@($"{@Model.Teacher.Code}/{@Model.Teacher.Name}")</div>
+
+
+<div>
+    @foreach (var student in Model.Students)
+    {
+        <div>
+            @student.FirstName
+
+            @if (student.StartYear < 2017)
+            {
+                <span>@student.StartYear</span>
+            }
+        </div>
+    }
+
+
+</div>
+
+
+</body>
+</html>
