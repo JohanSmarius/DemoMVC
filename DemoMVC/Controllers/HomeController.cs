@@ -50,11 +50,20 @@ namespace DemoMVC.Controllers
         }
 
         [HttpGet]
-        public IActionResult Teacher()
+        public IActionResult StudentBare()
         {
-            var teacher = new Teacher {Code = "paga", Name = "Pascal van Gastel"};
-            return View(teacher);
+            var model = new Student
+            {
+                FirstName = "Johan",
+                LastName = "Smarius",
+                Number = 12345,
+                StartYear = 2018
+            };
+            
+            return View("StudentBare", model);
         }
+
+
 
     }
 }
