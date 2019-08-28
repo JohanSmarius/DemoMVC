@@ -5,16 +5,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DemoMVC.Models;
+using DemoMVC.Models.ViewModels;
 
 namespace DemoMVC.Controllers
 {
     public class HomeController : Controller
     {
-        //public string Index()
-        //{
-        //    return "Hello World";
-        //}
-
         public IActionResult Index()
         {
             return View();
@@ -51,6 +47,13 @@ namespace DemoMVC.Controllers
 
 
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult Teacher()
+        {
+            var teacher = new Teacher {Code = "paga", Name = "Pascal van Gastel"};
+            return View(teacher);
         }
 
     }
