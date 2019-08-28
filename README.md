@@ -92,5 +92,5 @@ Demo:
 5. Explain the use of the addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers 
 
 # Razor (RazorInView)
-This demo shows how you can use some razor syntax in the view
+This demo shows how you can use some razor syntax in the view (/Home/Course)
 
