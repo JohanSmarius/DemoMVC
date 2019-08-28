@@ -57,6 +57,12 @@ namespace DemoMVC
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                    name: "students",
+                    template: "students",
+                    defaults: new { controller = "Home", action = "StudentEdit" }
+                );
+
+                routes.MapRoute(
                     name: "non-default",
                     template: "/Pages/{controller=Home}/{action=Index}/{id?}");
 
