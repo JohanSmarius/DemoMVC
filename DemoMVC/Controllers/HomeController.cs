@@ -63,6 +63,18 @@ namespace DemoMVC.Controllers
             return View("StudentBare", model);
         }
 
+        [HttpGet]
+        public IActionResult Teacher()
+        {
+            var teacher = new Teacher
+            {
+                Name = "John Doe",
+                Code = "C#"
+            };
+
+            return View("Teacher", teacher);
+        }
+
 
 
     }
